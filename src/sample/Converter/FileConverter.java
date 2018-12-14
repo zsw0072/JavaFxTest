@@ -16,12 +16,6 @@ public class FileConverter {
 
     private final static String TAGET_FLAG = "taget";
 
-    public static void main(String[] args) throws Exception {
-        String source = "C:\\Users\\Admin\\Desktop\\test.txt";
-        ConvertTxtToExcel(source, source.replace(".txt", ".xlsx"),
-                "2018-11");
-    }
-
     //convert the DHL monthly report to excel file
     public static void ConvertTxtToExcel(String source, String dest, String sheetName) throws Exception {
 
