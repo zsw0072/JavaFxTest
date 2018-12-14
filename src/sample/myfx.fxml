@@ -7,10 +7,10 @@
 
 <AnchorPane prefHeight="189.0" prefWidth="451.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <Button id="convert" layoutX="355.0" layoutY="145.0" mnemonicParsing="false" text="Convert" />
+        <Button id="convert" layoutX="355.0" layoutY="145.0" mnemonicParsing="false" onAction="#convertToExcel" text="Convert" />
         <TextField id="destTxt" layoutX="31.0" layoutY="95.0" prefHeight="27.0" prefWidth="267.0" text="Destination Path" />
-        <Button id="sourceBtn" layoutX="347.0" layoutY="44.0" mnemonicParsing="false" onAction="#showDateTime" prefHeight="25.0" prefWidth="77.0" text="Source" />
-        <Button id="destBtn" layoutX="347.0" layoutY="95.0" mnemonicParsing="false" text="Destination" />
+        <Button id="sourceBtn" layoutX="347.0" layoutY="44.0" mnemonicParsing="false" onAction="#getSourcePath" prefHeight="25.0" prefWidth="77.0" text="Source" />
+        <Button id="destBtn" layoutX="347.0" layoutY="95.0" mnemonicParsing="false" onAction="#setDestPath" text="Destination" />
         <Text id="text" layoutX="45.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Convert txt file to .xlsx file" wrappingWidth="241.13671875" />
         <TextField id="sourceTxt" layoutX="31.0" layoutY="44.0" prefHeight="27.0" prefWidth="267.0" text="Source Path" />
     </children>

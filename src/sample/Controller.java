@@ -11,6 +11,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import sample.Converter.FileConverter;
 
 import javax.xml.soap.Text;
 import java.io.File;
@@ -59,7 +60,9 @@ public class Controller implements Initializable{
     }
 
     @FXML
-    private void convertToExcel(String SourcePath,String destPath){
-
+    private void convertToExcel() throws Exception{
+        String sourceTxtPath = sourceTxt.getText();
+        String destPath = destTxt.getText();
+        FileConverter.ConvertTxtToExcel(sourceTxtPath,destPath,"2018-11");
     }
 }
