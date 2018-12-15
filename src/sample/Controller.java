@@ -60,7 +60,7 @@ public class Controller implements Initializable{
     }
 
     @FXML
-    private void convertToExcel() throws Exception{
+    private void convertToExcel(ActionEvent event) throws Exception{
         String sourceTxtPath = sourceTxt.getText();
         String destPath = destTxt.getText();
         FileConverter.ConvertTxtToExcel(sourceTxtPath,destPath,"2018-11");
