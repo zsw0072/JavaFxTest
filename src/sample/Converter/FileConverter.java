@@ -27,8 +27,13 @@ public class FileConverter {
         Sheet sheet = sxssfWorkbook.createSheet(sheetName);
 
         //get the filename of sourcePath
-        String filename = source.substring(source.lastIndexOf("/"),source.length()-1);
-        String filePath = dest + filename;
+        String filename;
+        if (System.getProperty("os.name").toLowerCase().contains("windows")){
+            filename = source.substring(source.lastIndexOf("\\"),source.length());
+        }else{
+            filename = source.substring(source.lastIndexOf("/"),source.length());
+        }
+        String filePath = (dest + filename).replaceAll(".txt",".xlsx");;
         FileOutputStream fos = new FileOutputStream(filePath);
         String line;
         int count = 0;
